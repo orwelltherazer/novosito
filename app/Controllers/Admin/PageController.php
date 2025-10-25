@@ -17,7 +17,7 @@ class PageController extends Controller {
         $pageModel = new Page();
         $pages = $pageModel->all('order_position ASC');
 
-        echo $this->view('admin.pages.index', [
+        echo $this->view('pages.index', [
             'pages' => $pages
         ]);
     }
@@ -26,7 +26,7 @@ class PageController extends Controller {
      * Affiche le formulaire de création
      */
     public function create() {
-        echo $this->view('admin.pages.create');
+        echo $this->view('pages.create');
     }
 
     /**
@@ -88,7 +88,7 @@ class PageController extends Controller {
         // Récupère la configuration des modules disponibles
         $availableModules = require __DIR__ . '/../../../config/modules.php';
 
-        echo $this->view('admin.pages.edit', [
+        echo $this->view('pages.edit', [
             'page' => $page,
             'modules' => $modules,
             'availableModules' => $availableModules

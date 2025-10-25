@@ -25,7 +25,7 @@ class DashboardController extends Controller {
             'draft_pages' => $pageModel->count(['status' => 'draft'])
         ];
 
-        echo $this->view('admin.dashboard', [
+        echo $this->view('dashboard', [
             'stats' => $stats
         ]);
     }

@@ -5,9 +5,11 @@ RewriteEngine On
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Ne pas réécrire les fichiers et dossiers existants
+# Exclure les dossiers qui contiennent des assets statiques
+RewriteCond %{REQUEST_URI} !(assets|uploads|themes)/
+
+# Ne pas réécrire les fichiers existants
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 
 # Réécrire toutes les autres requêtes vers index.php
 RewriteRule ^(.*)$ index.php [QSA,L]
