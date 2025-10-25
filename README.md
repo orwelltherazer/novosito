@@ -1,6 +1,12 @@
 # NovoSito CMS
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![PHP](https://img.shields.io/badge/PHP-7.4%2B-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
 **NovoSito** est un CMS modulaire léger et performant conçu pour créer rapidement des sites vitrines simples et fonctionnels. Parfait pour les auto-entrepreneurs, artisans, associations ou particuliers.
+
+🔗 **GitHub** : [https://github.com/orwelltherazer/novosito](https://github.com/orwelltherazer/novosito)
 
 ## Caractéristiques principales
 
