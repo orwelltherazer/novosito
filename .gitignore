@@ -1,0 +1,41 @@
+# Configuration
+config/database.php
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Cache
+cache/*
+!cache/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Vendor (si utilisation de Composer)
+vendor/
+composer.lock
+
+# Node modules (si utilisation de npm)
+node_modules/
+package-lock.json

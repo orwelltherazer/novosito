@@ -1,0 +1,199 @@
+/* NovoSito - Thème par défaut */
+
+/* Variables */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+/* Styles généraux */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+.site-header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .nav-link:hover {
+    opacity: 0.8;
+}
+
+/* Page Title */
+.page-title {
+    font-weight: 700;
+    color: var(--dark-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+/* Modules */
+.module {
+    margin-bottom: 30px;
+}
+
+.module-text {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.module-text h1,
+.module-text h2,
+.module-text h3,
+.module-text h4,
+.module-text h5,
+.module-text h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.module-text p {
+    margin-bottom: 1rem;
+}
+
+.module-text ul,
+.module-text ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.module-image {
+    margin: 2rem 0;
+}
+
+.module-image img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.module-gallery {
+    margin: 2rem 0;
+}
+
+.gallery-grid {
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.module-contact {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.module-contact h2 {
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.contact-form .btn {
+    margin-top: 1rem;
+}
+
+.module-map {
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.site-footer {
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .site-header nav {
+        display: none;
+    }
+
+    .page-title {
+        font-size: 1.75rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.module {
+    animation: fadeIn 0.5s ease-out;
+}
