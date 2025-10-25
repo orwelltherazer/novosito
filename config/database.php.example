@@ -1,0 +1,30 @@
+<?php
+/**
+ * Configuration de la base de données
+ *
+ * IMPORTANT : Copiez ce fichier vers database.php et configurez vos identifiants
+ * Commande : cp config/database.php.example config/database.php
+ */
+
+return [
+    // Hôte de la base de données
+    'host' => 'localhost',
+
+    // Nom de la base de données
+    'database' => 'novosito_cms',
+
+    // Nom d'utilisateur
+    'username' => 'root',
+
+    // Mot de passe
+    'password' => '',
+
+    // Charset
+    'charset' => 'utf8mb4',
+
+    // Collation
+    'collation' => 'utf8mb4_unicode_ci',
+
+    // Préfixe des tables (optionnel)
+    'prefix' => '',
+];
