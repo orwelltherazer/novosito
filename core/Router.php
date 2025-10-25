@@ -9,6 +9,7 @@ namespace Core;
 class Router {
     private $routes = [];
     private $params = [];
+    private $basePath = '';
 
     /**
      * Ajoute une route GET
@@ -69,6 +70,13 @@ class Router {
 
         // Retire les paramètres de requête
         $requestUri = strtok($requestUri, '?');
+
+        // Détecte et retire le base path automatiquement
+        $this->detectBasePath();
+        if ($this->basePath && strpos($requestUri, $this->basePath) === 0) {
+            $requestUri = substr($requestUri, strlen($this->basePath));
+        }
+
         $requestUri = $this->normalizePath($requestUri);
 
         foreach ($this->routes as $route) {
@@ -138,5 +146,17 @@ class Router {
      */
     public function getParams() {
         return $this->params;
+    }
+
+    /**
+     * Détecte automatiquement le base path
+     */
+    private function detectBasePath() {
+        if ($this->basePath !== '') {
+            return; // Déjà détecté
+        }
+
+        $scriptName = dirname($_SERVER['SCRIPT_NAME']);
+        $this->basePath = rtrim($scriptName, '/');
     }
 }

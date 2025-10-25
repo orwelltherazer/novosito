@@ -69,7 +69,7 @@ class Model {
         $query = "INSERT INTO {$this->table} ({$columnList}) VALUES ({$placeholders})";
 
         $params = array_combine(
-            array_map(fn($col) => ":{$col}", $columns),
+            array_map(function($col) { return ":{$col}"; }, $columns),
             $values
         );
 
